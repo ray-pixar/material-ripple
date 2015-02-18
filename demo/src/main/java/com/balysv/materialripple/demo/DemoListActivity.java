@@ -29,7 +29,7 @@ public class DemoListActivity extends ActionBarActivity implements AdapterView.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.demo_list);
         ListView listView = (ListView) findViewById(R.id.list);
-        listView.setAdapter(new ArrayAdapter<>(this, R.layout.demo_list_item, android.R.id.text1, data));
+        listView.setAdapter(new ArrayAdapter<String>(this, R.layout.demo_list_item, android.R.id.text1, data));
         listView.setOnItemClickListener(this);
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
